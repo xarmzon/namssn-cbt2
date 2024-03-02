@@ -30,6 +30,7 @@ module.exports = {
       },
       backgroundImage: {
         book: `url('/assets/images/bg_img.jpg')`,
+        senateBuilding: `url('/assets/images/senate_building.jpg')`,
       },
     },
   },

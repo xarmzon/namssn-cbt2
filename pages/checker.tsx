@@ -80,11 +80,11 @@ const ResultChecker = () => {
     <>
       <NextSeo title="Results Checker" />
       <div className="bg-book bg-no-repeat bg-cover bg-primary bg-blend-multiply backdrop-filter backdrop-blur-[3px] flex flex-col items-center justify-center min-h-screen p-5">
-        <div className="z-20 flex justify-center w-full mt-5 -mb-8 shadow-md max-w-max">
+        <div className="z-20 flex justify-center w-full mt-5 mb-5 max-w-max">
           <Logo size="large" />
         </div>
         <div className="text-primary space-y-4 w-full max-w-lg min-h-[300px] bg-gray-50 bg-opacity-95 backdrop-filter backdrop-blur-sm p-5 rounded-md pt-8">
-          <h1 className="text-center text-primary text-xl font-bold pt-3 mb-2">
+          <h1 className="pt-3 mb-2 text-xl font-bold text-center text-primary">
             Check My Results
           </h1>
           <div className="my-4">
@@ -94,7 +94,7 @@ const ResultChecker = () => {
               </div>
             )}
           </div>
-          <div className="mt-5 w-full">
+          <div className="w-full mt-5">
             <form className="space-y-8" onSubmit={handleSubmit}>
               <Input
                 placeholder="Enter your JAMB No. or Phone Number"
@@ -115,35 +115,35 @@ const ResultChecker = () => {
             </form>
           </div>
           {resultsData && submitText !== "Loading..." && (
-            <div className="overflow-x-auto mt-10">
-              <h1 className="text-lg px-3 font-bold text-center mb-4">
+            <div className="mt-10 overflow-x-auto">
+              <h1 className="px-3 mb-4 text-lg font-bold text-center">
                 {APP_NAME} Results Notification
               </h1>
               <div className="px-3">
-                <div className="text-secondary space-y-2 mb-5">
+                <div className="mb-5 space-y-2 text-secondary">
                   <p className="flex">
-                    <span className="w-2/5 flex-shrink-0"> Name: </span>
-                    <span className="3/5 flex-shrink-0 font-bold px-3 flex-wrap">
+                    <span className="flex-shrink-0 w-2/5"> Name: </span>
+                    <span className="flex-wrap flex-shrink-0 px-3 font-bold 3/5">
                       {resultsData.fullName}
                     </span>
                   </p>
                   <p className="flex">
-                    <span className="w-2/5 flex-shrink-0">JAMB Reg.:</span>
-                    <span className="3/5 flex-shrink-0 font-bold px-3">
+                    <span className="flex-shrink-0 w-2/5">JAMB Reg.:</span>
+                    <span className="flex-shrink-0 px-3 font-bold 3/5">
                       {resultsData.jamb}
                     </span>
                   </p>
                   {resultsData.department !== "--------" && (
                     <p className="flex">
-                      <span className="w-2/5 flex-shrink-0"> Department: </span>
-                      <span className="3/5 flex-shrink-0 font-bold px-3">
+                      <span className="flex-shrink-0 w-2/5"> Department: </span>
+                      <span className="flex-shrink-0 px-3 font-bold 3/5">
                         {resultsData.department}
                       </span>
                     </p>
                   )}
                 </div>
                 <div>
-                  <h4 className="font-bold text-lg text-secondary">Results</h4>
+                  <h4 className="text-lg font-bold text-secondary">Results</h4>
                   <ul className="mb-5">
                     {resultsData.results.map((d, i) => (
                       <li
@@ -168,7 +168,7 @@ const ResultChecker = () => {
             </div>
           )}
         </div>
-        <div className="text-gray-200 mt-9 max-w-md mx-auto text-center">
+        <div className="max-w-md mx-auto text-center text-gray-200 mt-9">
           <Footer />
         </div>
       </div>
