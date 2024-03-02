@@ -194,7 +194,7 @@ const RegisterPage = ({ courses }: RegisterPageProps) => {
     <>
       <NextSeo title="Students Registration" />
       <div className="flex flex-col items-center justify-center min-h-screen p-5 bg-no-repeat bg-cover bg-senateBuilding bg-primary bg-blend-multiply backdrop-filter backdrop-blur-sm">
-        <div className="z-20 flex justify-center w-full mt-5 -mb-8 shadow-md max-w-max">
+        <div className="z-20 flex justify-center w-full mt-5 -mb-8 max-w-max">
           <Logo size="large" />
         </div>
         <div className="text-primary space-y-4 w-full max-w-lg min-h-[300px] bg-gray-50 bg-opacity-95 backdrop-filter backdrop-blur-sm p-5 rounded-md pt-8">

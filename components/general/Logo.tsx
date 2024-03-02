@@ -10,7 +10,7 @@ export interface LogoProps {
 const Logo = ({ size = "small" }: LogoProps) => {
   return (
     <Link href="/">
-      <a className="relative bg-white">
+      <a className="relative">
         <div
           className={`relative ${
             size === "small"
