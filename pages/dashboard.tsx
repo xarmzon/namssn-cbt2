@@ -88,7 +88,7 @@ const ListItem = ({ primaryText, secondaryText }: ListItemProps) => {
   return (
     <li className="py-4">
       <p className="font-bold text-primary">{primaryText}</p>
-      <p className="text-sm text-secondary mt-1">{secondaryText}</p>
+      <p className="mt-1 text-sm text-secondary">{secondaryText}</p>
     </li>
   );
 };
@@ -97,7 +97,7 @@ const ListData = ({ data, loading }: ListDataProps) => {
   return (
     <>
       {loading ? (
-        <div className="text-xl mt-5 w-full h-full flex items-center justify-center text-primary font-bold">
+        <div className="flex items-center justify-center w-full h-full mt-5 text-xl font-bold text-primary">
           Loading...
         </div>
       ) : (
@@ -132,7 +132,7 @@ const Dashboard = () => {
     <>
       <NextSeo title="Dashboard" nofollow={true} noindex={true} />
       <DashboardLayout>
-        <h2 className="text-lg text-primary mb-5 font-bold">Dashboard</h2>
+        <h2 className="mb-5 text-lg font-bold text-primary">Dashboard</h2>
         <div className={`flex flex-col  sm:flex-row gap-5 w-full`}>
           <InfoCard head="Courses" color="primary" icon={<HiOutlineBookOpen />}>
             {!dashboardDataError && !dashboardData && "Loading..."}
@@ -145,7 +145,7 @@ const Dashboard = () => {
               dashboardData.totalStudents}
           </InfoCard>
         </div>
-        <div className="w-full flex gap-10 flex-col md:flex-row mt-5">
+        <div className="flex flex-col w-full gap-10 mt-5 md:flex-row">
           <RecentCard header="Recent Results">
             <ListData
               loading={!dashboardDataError && !dashboardData ? true : false}
@@ -163,7 +163,7 @@ const Dashboard = () => {
                                   : (d.score / d.course.questionNum) * 100 <
                                       70 &&
                                     (d.score / d.course.questionNum) * 100 >= 60
-                                  ? "text-secondary"
+                                  ? "text-blue-500"
                                   : (d.score / d.course.questionNum) * 100 <
                                       60 &&
                                     (d.score / d.course.questionNum) * 100 >= 50
